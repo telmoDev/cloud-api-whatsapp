@@ -1,0 +1,50 @@
+{
+    "name": "telmodev/cloud-api-whatsapp",
+    "description": "Laravel SDK for the Meta WhatsApp Cloud API — send messages, manage templates, handle webhooks and more",
+    "keywords": [
+        "laravel",
+        "whatsapp",
+        "cloud api",
+        "meta",
+        "facebook"
+    ],
+    "homepage": "https://github.com/telmoDev/cloud-api-whatsapp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Telmo Ramirez",
+            "email": "telmodanielramirez+packagist@gmail.com",
+            "homepage": "https://github.com/telmoDev"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Telmo\\CloudApiWhatsapp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Telmo\\CloudApiWhatsapp\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Telmo\\CloudApiWhatsapp\\CloudApiWhatsappServiceProvider"
+            ],
+            "aliases": {
+                "CloudApiWhatsapp": "Telmo\\CloudApiWhatsapp\\Facades\\CloudApiWhatsapp"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
