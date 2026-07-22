@@ -1,7 +1,7 @@
 # Laravel WhatsApp Cloud API Client
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/telmo/cloud-api-whatsapp.svg?style=flat-square)](https://packagist.org/packages/telmo/cloud-api-whatsapp)
-[![Total Downloads](https://img.shields.io/packagist/dt/telmo/cloud-api-whatsapp.svg?style=flat-square)](https://packagist.org/packages/telmo/cloud-api-whatsapp)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/telmodev/cloud-api-whatsapp.svg?style=flat-square)](https://packagist.org/packages/telmodev/cloud-api-whatsapp)
+[![Total Downloads](https://img.shields.io/packagist/dt/telmodev/cloud-api-whatsapp.svg?style=flat-square)](https://packagist.org/packages/telmodev/cloud-api-whatsapp)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 A simple, clean, and elegant Laravel package to interact with the Meta WhatsApp Cloud API.
@@ -26,9 +26,13 @@ A simple, clean, and elegant Laravel package to interact with the Meta WhatsApp 
 
 ## Installation
 
+Install the package via Composer:
+
 ```bash
-composer require telmo/cloud-api-whatsapp
+composer require telmodev/cloud-api-whatsapp
 ```
+
+The Service Provider and Facade are registered automatically via Laravel's package auto-discovery. No manual changes to `config/app.php` are needed.
 
 ### Publish the configuration file
 
@@ -36,7 +40,7 @@ composer require telmo/cloud-api-whatsapp
 php artisan vendor:publish --tag="cloud-api-whatsapp-config"
 ```
 
-This creates `config/cloud-api-whatsapp.php` with all available options.
+This creates `config/cloud-api-whatsapp.php` in your project with all available options.
 
 ## Configuration
 
