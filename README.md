@@ -42,6 +42,14 @@ php artisan vendor:publish --tag="cloud-api-whatsapp-config"
 
 This creates `config/cloud-api-whatsapp.php` in your project with all available options.
 
+### Publish the AI agent instructions
+
+```bash
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents"
+```
+
+This copies `AGENTS.md` to the root of your project. The file contains full SDK documentation for AI coding assistants (Kiro, Copilot, Cursor, etc.) so they can implement the SDK correctly without browsing the source.
+
 ## Configuration
 
 Add these variables to your `.env` file:

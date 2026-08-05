@@ -29,11 +29,16 @@ class CloudApiWhatsappServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Publish config
         if ($this->app->runningInConsole()) {
+            // Publish config
             $this->publishes([
                 __DIR__ . '/../config/cloud-api-whatsapp.php' => config_path('cloud-api-whatsapp.php'),
             ], 'cloud-api-whatsapp-config');
+
+            // Publish AGENTS.md (AI agent instructions)
+            $this->publishes([
+                __DIR__ . '/../AGENTS.md' => base_path('AGENTS.md'),
+            ], 'cloud-api-whatsapp-agents');
         }
     }
 }
