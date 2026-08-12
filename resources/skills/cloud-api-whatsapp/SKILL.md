@@ -1,3 +1,10 @@
+---
+name: cloud-api-whatsapp
+description: Implement and integrate the telmodev/cloud-api-whatsapp Laravel SDK for the Meta WhatsApp Cloud API. Use when sending messages, templates, media, interactive messages, business profiles, or reading webhooks, and when working with the WHATSAPP_* configuration or the CloudApiWhatsapp facade. Covers method signatures, return types, exceptions, dynamic config, and testing with Http::fake().
+license: MIT
+compatibility: PHP ^8.2, Laravel 10-12
+---
+
 # Agent Instructions — telmodev/cloud-api-whatsapp
 
 > This file is for AI coding assistants. The `telmodev/cloud-api-whatsapp` package is already installed in this project. Use this file as the single source of truth for how to implement it correctly.

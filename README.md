@@ -42,13 +42,37 @@ php artisan vendor:publish --tag="cloud-api-whatsapp-config"
 
 This creates `config/cloud-api-whatsapp.php` in your project with all available options.
 
-### Publish the AI agent instructions
+### Publish the AI agent skill
+
+The package ships the SDK documentation as an **Agent Skill** (open `SKILL.md` standard), so AI coding assistants (Claude Code, opencode, Codex, ChatGPT, Cursor, Gemini CLI, Antigravity, etc.) can implement the SDK correctly without browsing the source.
+
+Install it for your provider:
 
 ```bash
-php artisan vendor:publish --tag="cloud-api-whatsapp-agents"
+# Pick the tag that matches your AI coding assistant
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-claude"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-opencode"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-codex"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-chatgpt"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-cursor"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-gemini"
+php artisan vendor:publish --tag="cloud-api-whatsapp-agents-antigravity"
 ```
 
-This copies `AGENTS.md` to the root of your project. The file contains full SDK documentation for AI coding assistants (Kiro, Copilot, Cursor, etc.) so they can implement the SDK correctly without browsing the source.
+Each tag copies the skill into the provider's skill directory in your project:
+
+| Tag | Installed to | Providers that read it |
+|-----|--------------|------------------------|
+| `...-claude` | `.claude/skills/cloud-api-whatsapp/` | Claude Code |
+| `...-opencode` | `.opencode/skills/cloud-api-whatsapp/` | opencode |
+| `...-codex` | `.agents/skills/cloud-api-whatsapp/` | OpenAI Codex |
+| `...-chatgpt` | `.agents/skills/cloud-api-whatsapp/` | ChatGPT |
+| `...-cursor` | `.cursor/skills/cloud-api-whatsapp/` | Cursor |
+| `...-gemini` | `.gemini/skills/cloud-api-whatsapp/` | Gemini CLI |
+| `...-antigravity` | `.agents/skills/cloud-api-whatsapp/` | Google Antigravity |
+| `cloud-api-whatsapp-agents` (combined) | `.agents/skills/cloud-api-whatsapp/` | opencode, Codex, ChatGPT, Cursor, Gemini CLI, Antigravity |
+
+The combined tag installs to the shared `.agents/skills/` location that most tools read. **Claude Code does not read `.agents/skills`** — use `cloud-api-whatsapp-agents-claude` if you use Claude Code.
 
 ## Configuration
 
