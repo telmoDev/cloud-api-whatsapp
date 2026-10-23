@@ -19,7 +19,7 @@ Worktrees and local branches whose latest PR is merged or closed. Check uncommit
 <!-- state:end -->
 
 ## In flight
-PRs cell: `<repo> #N open|draft|merged|closed`, one per repo, e.g. `api #N open, web #M draft`. No branch names or commit hashes: the generated block has the branches, and hashes go stale on the next push.
+PRs cell: `<repo> #N open|draft|merged|closed`, one per repo, e.g. `api #12 open, web #7 draft`. No branch names or commit hashes: the generated block has the branches, and hashes go stale on the next push.
 
 Outcome cell: criteria `passed` over total and the rest by status, e.g. `2/3 passed, O3 pending`. The criteria text lives in the PR body or the spec.
 
